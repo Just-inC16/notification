@@ -19,7 +19,7 @@ public class NotificationController {
 	}
 
 	@PostMapping("/send")
-	public ResponseEntity<?> sendNotification(@RequestBody Notification notification) {
+	public ResponseEntity<Notification> sendNotification(@RequestBody Notification notification) {
 		return ResponseEntity.ok(notificationRepository.save(notification));
 	}
 
